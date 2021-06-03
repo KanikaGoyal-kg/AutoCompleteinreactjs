@@ -1,0 +1,23 @@
+.main-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.second-div {
+    border-radius: 5px;
+    width: 30%;
+    box-shadow: 1px 0px 15px 1px lightgrey;
+}
+.input-div {
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.input-div input {
+    width: 80%;
+    height: 30px;
+    outline: none;
+}
