@@ -26,14 +26,15 @@ const AutoComplete = () => {
 
      function searchData (key) {
          console.log(key,"key")
-         if(value.length > 0){
-            const regex = new RegExp(`^${value}`, 'i');
-        const filteredData = data.filter((countryname) => countryname.name === key)
-        console.log(filteredData,"hjf");
-        
-    }
-
-    }
+        const filteredData = data.filter((countryname) => {
+        const regex = new RegExp(`${key}`)
+        return countryname.name.match(regex)
+        // console.log(countryname)
+         })
+         setEnterDetails(filteredData)
+         console.log(enterDetails)
+}
+ 
 
 
     return (
@@ -41,6 +42,11 @@ const AutoComplete = () => {
             <div className="second-div">
                 <div className="input-div">
                     <input  onChange={(e) => searchData(e.target.value) } type="text" placeholder="" />
+                    {enterDetails.map((item) => {
+                        return (
+                        <div>{item.name}</div>
+                        )
+                    })}
                 </div>
                      
             </div>

@@ -8,13 +8,18 @@
 .second-div {
     border-radius: 5px;
     width: 30%;
-    box-shadow: 1px 0px 15px 1px lightgrey;
+    /* box-shadow: 1px 0px 15px 1px lightgrey; */
 }
 .input-div {
     display: flex;
     justify-content: center;
     padding-top: 15px;
     padding-bottom: 15px;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    width: 30%;
+    box-shadow: 1px 0px 15px 1px lightgrey;
 }
 .input-div input {
     width: 80%;
