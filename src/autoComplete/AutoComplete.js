@@ -4,7 +4,6 @@ import names from '../component/AutoSearch'
 
 const AutoComplete = () => {
 
-    // const [display, setDisplay] = useState(false);
     const [data, setData] = useState([]);
     const [search, setSearch] = useState("");
     const [enterDetails, setEnterDetails] = useState([])
@@ -29,7 +28,6 @@ const AutoComplete = () => {
         const filteredData = data.filter((countryname) => {
         const regex = new RegExp(`${key}`)
         return countryname.name.match(regex)
-        // console.log(countryname)
          })
          setEnterDetails(filteredData)
          console.log(enterDetails)
