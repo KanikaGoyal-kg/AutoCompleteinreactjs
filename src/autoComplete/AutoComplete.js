@@ -24,15 +24,21 @@ const AutoComplete = () => {
 
      function searchData (text) {
         setSearch(text);
+         if(!search) {
+            setEnterDetails(data)
+         } else {
         const filteredData = data.filter((countryname) => {
-        const regex = new RegExp(`${text}`)
-        return countryname.name.match(regex)
+        const regex = new RegExp(`${text}`, "gi")
+        return countryname.name.match(regex) || countryname.capital.match(regex)
          })
          setEnterDetails(filteredData)
-         console.log(enterDetails)
+        //  console.log(enterDetails)
+        }
 }
  
-
+    // const inputField = () => {
+        
+    // }
 
     return (
         <div className="main-div">
