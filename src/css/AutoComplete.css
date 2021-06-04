@@ -19,6 +19,7 @@
     position: fixed;
     width: 30%;
     box-shadow: 1px 0px 15px 1px lightgrey;
+    border-radius: 5px;
 }
 .input-div input {
     width: 80%;
